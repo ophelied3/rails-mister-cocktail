@@ -14,7 +14,6 @@ list_serialized = open(url).read
 
 list = JSON.parse(list_serialized)
 
-
 list["drinks"].each do |hash|
   Ingredient.create(name: hash["strIngredient1"])
 end

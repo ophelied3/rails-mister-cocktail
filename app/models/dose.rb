@@ -1,7 +1,7 @@
 class Dose < ApplicationRecord
   belongs_to :cocktail
   belongs_to :ingredient
+  validates :ingredient_id, presence: true
   validates :description, presence: true
-  validates :cocktail, :uniqueness => { :scope => :ingredient, presence: true }, presence: true
-  # tester si leur présence est bien obligatoire
+  validates :cocktail, :uniqueness => { :scope => :ingredient }, presence: true
 end
