@@ -13,6 +13,7 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+@import "pages/show";
 
 
 h1 {
@@ -20,5 +21,6 @@ h1 {
   font-weight: bold;
   text-align: center;
   font-size: 40px;
+  margin-top: 45px;
 }
 

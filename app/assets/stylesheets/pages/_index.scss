@@ -1,8 +1,30 @@
+.wrapper {
+  padding-bottom: 100px;
+}
+.card {
+  text-align: center;
+  padding-top: 45px;
+  margin: 20px;
+  height: 300px;
+}
+
 .card-image  {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.card-image:hover {
-  margin-top: -5px;
+.card:hover {
+  padding-top: 35px;
 }
+
+.card a:hover {
+  text-decoration: none;
+}
+
+.card-name {
+  color: #2A363B;
+  margin-top: 15px;
+  font-family: 'Sedgwick Ave', cursive;
+}
+
+

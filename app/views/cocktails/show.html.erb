@@ -1,8 +1,13 @@
-<h1><%= @cocktail.name %></h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @cocktail.photo.path, height: 900, width: 1000, crop: :fill %>'); background-position: center;">
+  <div class="banner-content">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+</div>
 
-<% if @cocktail.photo? %>
-  <%= cl_image_tag @cocktail.photo.path, width: 500, height: 300, crop: :fill %>
-<% end %>
+<div class="wrapper">
+  <div class="container">
+
 
 <h3>Doses :</h3>
 
@@ -20,7 +25,7 @@
   <% end %>
 </ul>
 
-<div class="container">
+
 
   <h3>Ajouter une dose</h3>
 
@@ -30,7 +35,7 @@
     </div>
   </div>
 
+  </div>
 </div>
-
 
 
