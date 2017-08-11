@@ -1,15 +1,15 @@
-<h1>Liste des cocktails</h1>
-
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li>
+<div class="container">
+  <h1>Liste des cocktails</h1>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+        <% if cocktail.photo? %>
+          <%= cl_image_tag cocktail.photo.path, width: 250, height: 250, crop: :fill, class: "card-image" %>
+        <% end %>
       <%= link_to cocktail.name, cocktail_path(cocktail) %>
-      <% if cocktail.photo? %>
-        <%= cl_image_tag cocktail.photo.path, width: 300, height: 100, crop: :fill %>
-      <% end %>
-    </li>
+    </div>
+    <% end %>
+  </div>
+</div>
 
-  <% end %>
-</ul>
 
-<!-- j'ai déjà lié les cartes dans scss  -->
